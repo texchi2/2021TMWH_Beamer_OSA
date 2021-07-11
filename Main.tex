@@ -368,6 +368,7 @@ Illustration from Libby P: Inflammation in Atherosclerosis. Nature 202;420:868%i
 \1 咽喉部的肌肉鬆弛、軟組織肥厚\\
 \1 睡眠姿勢、平躺角度\\
 ~\\
+\tikz \node[font=\sffamily\bfseries,scale=1.0,anchor=south] at (0,0) {OSA 是一個循環};
 \1 整晚經常處在淺睡，睡睡醒醒的分段睡眠(sleep fragmentation)\\
 ~\\
 \1 高頻、間歇的鼾聲，伴隨著呼吸暫時停止($\geq$10 sec)\\
@@ -421,21 +422,31 @@ arc({90-(\Y-0.5)*60}:{90-(\Y)*60-10}:\Radius);}
 \end{frame}
 
 
-\begin{frame}{發現睡眠呼吸中止}
+\begin{frame}{診斷睡眠呼吸中止}
 
     \begin{outline}
-    \1 睡眠呼吸中止症候群 (OSA)
-    \2 睡眠品質量表The Functional Outcomes of Sleep Questionnaire (FOSQ) ，the Epworth Sleepiness Scale (ESS)、夜尿量表
-    \2 檢查鼻腔跟口咽，cephalometry, cone-beam CT scan, MRI
-    \2 HRV 心律變異(代表交感神經活性)
-    \2 PSG Polysomnography 「睡眠多項生理檢查」，蒐集
-        \3 腦波圖、口鼻呼吸氣流、血氧濃度(SpO2)、鼾聲、肌電圖
-        \3 AHI  睡眠呼吸障礙事件的次數/小時，AHI指數(apnea-hypopnea index)
-    \2 HST 居家睡眠檢查
-    \2 Drug Induced Sleep. Endoscopy (DISE) 
+%    \1 睡眠呼吸中止症候群 (OSA)
+    \1 睡眠品質量表、夜尿量表
+        \2 The Functional Outcomes of Sleep Questionnaire (FOSQ)
+        \2 The Epworth Sleepiness Scale (ESS)
+    \1 鼻腔跟口咽檢查，醫學影像
+        \2 cephalometry, cone-beam CT scan, MRI
+    \1 HRV 心律變異($\less 50$ 代表交感神經活性太高)
+    \1 Polysomnography (PSG) 「睡眠多項生理檢查」，蒐集
+        \2 腦波圖、口鼻呼吸氣流、血氧濃度(SpO2)、鼾聲、肌電圖
+        \2 計算 \textcolor{red}{AHI} 指數(apnea-hypopnea index) $=$ 睡眠呼吸障礙事件的次數/小時
+    \1 居家睡眠檢查 (home sleep testing, HST)
+        \2 AHI 來自口鼻呼吸氣流、血氧濃度(SpO2)、鼾聲、胸腹呼吸動作
+    \1 以內視鏡觀察睡眠中口咽狀態 (Drug Induced Sleep. Endoscopy, DISE) 
     \end{outline}
-Keywords: Obstructive Sleep Apnea (OSA)
-睡眠呼吸中止症候群, Sleep Surgery, Palatopharyngoplasty, Algorithm, Maxillomandibular Advancement, Hypoglossal Nerve Stimulation, Upper Airway Stimulation \end{frame}
+    
+    \begin{block}{關鍵字:}
+\footnotesize{
+Obstructive Sleep Apnea (OSA) 睡眠呼吸中止, Sleep Surgery, Palatopharyngoplasty, Algorithm, Maxillomandibular Advancement, Hypoglossal Nerve Stimulation, Upper Airway Stimulation}  
+    \end{block}
+
+
+\end{frame}
 
 
 \begin{frame}{治療睡眠呼吸中止症候群}
@@ -464,7 +475,7 @@ Keywords: Obstructive Sleep Apnea (OSA)
       手術       &   & 鼻中膈與咽 &		鼻中膈與咽\\
        &   & 	正顎手術  &	正顎手術\\
       \bottomrule
-      \multicolumn{4}{c}{\small *睡眠姿勢，上半身壂高30度(可以減輕阻塞程度)}\\
+      \multicolumn{4}{c}{\small *睡眠姿勢，上半身壂高30度(氣流易通過)}\\
    \end{tabular}
 %   \caption{Remember, \emph{never} use vertical lines in tables.}
    \label{tab:booktabs}
@@ -482,7 +493,7 @@ Keywords: Obstructive Sleep Apnea (OSA)
 
 %\column{0.02\textwidth}
 
-\column{0.70\textwidth}
+\column{0.70\textwidth}{\huge{依照流程次第處置}}
 %\begin{figure}
 %    \centering
     \includegraphics[height = 12cm]{ceo-2020-01053f6.jpg}
@@ -490,7 +501,7 @@ Keywords: Obstructive Sleep Apnea (OSA)
 %\end{block}
 
 \column{0.25\textwidth}
-    \par Updated Stanford sleep surgery algorithm. PE, physical examination; PSG, polysomnography; BMI, body mass index; PAP, positive air- way pressure; OAT, oral appliance therapy; NP, nasopharyngoscopy; DISE, drug-induced sedation (sleep) endoscopy; CCC, complete con- centric collapse; LPW, lateral pharyngeal wall; DOME, distraction osteogenesis maxillary expansion; TBR, tongue base reduction; TORS, tran- soral robotic surgery; GGA, genioglossus advancement; UAS, upper airway stimulation.\\
+    \par Updated Stanford sleep surgery algorithm. PE, physical examination; PSG, polysomnography; BMI, body mass index; PAP, positive airway pressure; OAT, oral appliance therapy; NP, nasopharyngoscopy; DISE, drug-induced sedation (sleep) endoscopy; CCC, complete con- centric collapse; LPW, lateral pharyngeal wall; DOME, distraction osteogenesis maxillary expansion; TBR, tongue base reduction; TORS, tran- soral robotic surgery; GGA, genioglossus advancement; UAS, upper airway stimulation.\\
 %    \label{fig:my_label}
 %\end{figure}
 \end{columns}
@@ -499,15 +510,26 @@ Keywords: Obstructive Sleep Apnea (OSA)
 
 \end{frame}
 
-\begin{frame}{CPAP}
-    \begin{block}{CPAP}
-    「陽壓呼吸器」，在睡眠時配戴於口鼻，提供呼吸道一個正向壓力，防止阻塞。在使用前需要由睡眠技師先做壓力檢定，找尋最適合的壓力。目前呼吸器的種類愈來愈推陳出新，有些機種可以將打入的空氣加熱或潮濕，較不會有刺激或鼻塞的感覺。也有些機種有吐氣降壓或者根據患者呼吸停止的程度做自動調壓的功能，配戴起來較為舒適。
+\begin{frame}{治療首選 CPAP}
+    \centering
+    \includegraphics[height=0.30\textwidth]{stock-vector-vector-illustration-of-normal-breathing-with-cpap-mask-625415720.jpg}
+    
+    \begin{block}{CPAP: continuous positive airway pressure}
+    「陽壓呼吸器」，入睡時配戴於口鼻(或僅鼻)，提供咽喉正向壓力，防止塌陷。由睡眠技師調整參數，尋求最適當的壓力、溫度、濕度，減少刺激與鼻塞。也有吐氣時降壓等自動調節功能，減少配戴時的不適。
     \end{block}
+
 \end{frame}
 
-\begin{frame}{Anti-snoring guard 止鼾牙套}
+\begin{frame}{第二方案: OAT 止鼾牙套}
+\centering
+\includegraphics[height=0.30\textwidth]{Yanamoto2021.jpg}
+\par Courtesy of Yanamoto, S. et al.(2021) Semi-fixed versus fixed oral appliance therapy for obstructive sleep apnea: A randomized crossover pilot study. J. Dent. Sci. 16, 404–409: The oral appliance. (a) The semi-fixed oral appliance was comprised of two lateral connectors and individual customized appliances for the maxilla and mandible. (b) The fixed oral appliance consisted of appliances fixed together with resin.
+
+
+\begin{block}
+
 oral myofunctional therapy
-CPAP + oral appliance MADs
+oral appliance MADs
     anti-snoring guard 止鼾牙套 周孫隆老師\\
     Oral appliance therapy (OAT)\\
 Adjustable devices
@@ -524,6 +546,8 @@ Muscle tone 很弱， 睡著時mandible 很容易會往後塌陷， 以bilateral
 
 最後就是看一開始前置的量， 首先先決定maximal range of movement ( 即確認病人能夠最前置的量再加上overjet （如測量U1-L1 水平距離最大可達8mm, 病人overjet 是4mm. 那麼他的ROM 是12mm) 
 AADSM 建議若沒有其他考量， 則一開始可以放在50\%-75\% ROM 的量。再以每個月0.5-1 mm 做titration
+\end{block}
+
 \end{frame}
 
 
