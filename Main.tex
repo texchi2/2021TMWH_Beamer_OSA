@@ -175,11 +175,11 @@ Illustration from Libby P: Inflammation in Atherosclerosis. Nature 202;420:868%i
 
 \begin{columns}[onlytextwidth]
 \column{0.02\textwidth}
-\column{.45\textwidth}
+\column{0.45\textwidth}
 \includegraphics<1->[height = 10cm]{im/ivoct}\par
 (http://www.bioopticsworld.com/topics/cardiology.htm)% Reference 
-\column{.45\textwidth}
 
+\column{.45\textwidth}
 \begin{itemize}
 \item<1-> Point 1
 \item<2-| alert@2> Point 2% you may want to highlight it
@@ -383,6 +383,7 @@ Illustration from Libby P: Inflammation in Atherosclerosis. Nature 202;420:868%i
 \newcommand{\LineWidth}{15mm}
 \newcommand{\Radius}{4cm}
 \node[font=\sffamily\bfseries,scale=2.8,anchor=south] at (0,-0.5) {OSA};
+\node[font=\sffamily\bfseries,scale=1.8,anchor=south] at (0,-1.5) {(AHI)};
 % 6\textsigma on the center
 %\node[font=\sffamily,scale=6,anchor=north] at (0,0.5) {OSA};
 % segments 5 -> 6: 72 degree -> 60 degree
@@ -423,24 +424,80 @@ arc({90-(\Y-0.5)*60}:{90-(\Y)*60-10}:\Radius);}
 
 
 \begin{frame}{診斷睡眠呼吸中止}
+\begin{columns}
+    \column{0.45\textwidth}
+%    \begin{block}
+        \begin{outline}
+        \1 Polysomnography (PSG) 在醫院「睡眠多項生理檢查」，蒐集:
+        \2 腦波圖、口鼻呼吸氣流、血氧濃度(SpO2)、鼾聲、肌電圖
+        \2 計算 AHI
 
-    \begin{outline}
+        \end{outline}
+%    \end{block}
+~\\    
+~\\
+~\\
+~\\
+~\\
+~\\
+%    \begin{block}
+        \begin{outline}
 %    \1 睡眠呼吸中止症候群 (OSA)
-    \1 睡眠品質量表、夜尿量表
+        \1 鼻腔跟口咽檢查，醫學影像
+        \2 cephalometry, cone-beam CT scan, MRI
+        \1 內視鏡觀察睡眠中口咽狀態 (Drug Induced Sleep. Endoscopy, DISE) 
+    \end{outline}
+%    \end{block}
+%    \begin{block}
+    
+%    \end{block}
+    \column{0.15\textwidth}
+    \textcolor{red}{AHI} 指數(apnea-hypopnea index) $=$ 睡眠呼吸障礙事件的次數/小時
+    ~\\
+    ~\\
+        \centering
+
+        \begin{tikzpicture}% based on https://tex.stackexchange.com/a/9561/ (Caramdir's fantastic answer to another question)
+        \node (tiger) [anchor=south west, inner sep=0pt] {        \includegraphics[width=0.7\textwidth]{stock-vector-full-length-male-silhouette-body-human-figure-thin-fat-and-athletic-man-vector-illustration-obesity.jpg}};
+        \begin{scope}[x={(tiger.south east)},y={(tiger.north west)}]
+          \foreach \i/\j in {{(0.35,0.75)/(-0.35,0.2)}, %RF
+        {(0.65,0.85)/(1.15,1.00)}, %LH
+        {(0.66,0.7)/(1.15,0.2)}, %LF
+        {(0.35,0.85)/(-0.35,1.01)}} % RH
+            \draw [red, thick] \i -- \j;
+        \end{scope}
+      \end{tikzpicture}
+
+    \column{0.40\textwidth}
+%    \begin{block}
+        \begin{outline}
+        \1 居家睡眠檢查 (home sleep testing, HST)
+        \2 AHI 來自口鼻呼吸氣流、血氧濃度(SpO2)、鼾聲、胸腹呼吸動作
+        \end{outline}
+%    \end{block}
+~\\
+~\\
+~\\
+~\\
+~\\
+
+%    \begin{block}
+        \begin{outline}
+        \1 HRV 心律變異($\less 50$ 代表交感神經活性太高)
+        \1 睡眠品質量表、夜尿量表
         \2 The Functional Outcomes of Sleep Questionnaire (FOSQ)
         \2 The Epworth Sleepiness Scale (ESS)
-    \1 鼻腔跟口咽檢查，醫學影像
-        \2 cephalometry, cone-beam CT scan, MRI
-    \1 HRV 心律變異($\less 50$ 代表交感神經活性太高)
-    \1 Polysomnography (PSG) 「睡眠多項生理檢查」，蒐集
-        \2 腦波圖、口鼻呼吸氣流、血氧濃度(SpO2)、鼾聲、肌電圖
-        \2 計算 \textcolor{red}{AHI} 指數(apnea-hypopnea index) $=$ 睡眠呼吸障礙事件的次數/小時
-    \1 居家睡眠檢查 (home sleep testing, HST)
-        \2 AHI 來自口鼻呼吸氣流、血氧濃度(SpO2)、鼾聲、胸腹呼吸動作
-    \1 以內視鏡觀察睡眠中口咽狀態 (Drug Induced Sleep. Endoscopy, DISE) 
-    \end{outline}
+        \end{outline}
+%    \end{block}
+
+\end{columns}
+
+%\setlength{\unitlength}{1cm}
+%\thicklines
+%\draw (3,8) -- (5,6)
+%\put(3,8){\line(3,-2){3}} % start at (3,8) toward (3,-2) with length 3 cm
     
-    \begin{block}{關鍵字:}
+\begin{block}{關鍵字:}
 \footnotesize{
 Obstructive Sleep Apnea (OSA) 睡眠呼吸中止, Sleep Surgery, Palatopharyngoplasty, Algorithm, Maxillomandibular Advancement, Hypoglossal Nerve Stimulation, Upper Airway Stimulation}  
     \end{block}
@@ -515,7 +572,7 @@ Obstructive Sleep Apnea (OSA) 睡眠呼吸中止, Sleep Surgery, Palatopharyngop
     \includegraphics[height=0.30\textwidth]{stock-vector-vector-illustration-of-normal-breathing-with-cpap-mask-625415720.jpg}
     
     \begin{block}{CPAP: continuous positive airway pressure}
-    「陽壓呼吸器」，入睡時配戴於口鼻(或僅鼻)，提供咽喉正向壓力，防止塌陷。由睡眠技師調整參數，尋求最適當的壓力、溫度、濕度，減少刺激與鼻塞。也有吐氣時降壓等自動調節功能，減少配戴時的不適。
+    「陽壓呼吸器」，入睡時配戴於口鼻(或僅鼻)，提供咽喉正向壓力，防止塌陷。由睡眠技師調整參數，尋求最適當的壓力、溫度、濕度，減少刺激與鼻塞。也有吐氣時降壓等自動調節功能，減少配戴時的不適。亦能同步監測(手指)血氧濃度(SpO2)。
     \end{block}
 
 \end{frame}
